@@ -41,6 +41,13 @@ color:moccasin;
 .button:hover{
     background-color:palegreen;
 }
+.disabled{
+    background-color:grey;
+    cursor:not-allowed;
+}
+.disabled:hover{
+    background-color:grey;
+}
 .iframe {
     background-color:aqua;
     border-style:none;

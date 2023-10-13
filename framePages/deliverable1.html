@@ -1,0 +1,125 @@
+<h3>Group 7</h3>
+Rapporteur: Chance Hein<br>
+Lead Developer: Matt Nolley<br>
+Webmaster: Alice Thornes<br>
+<h2>Observations</h2>
+<h3>Scenario A</h3>
+School guest/Visitor/Parent is on a self-guided tour of the school and wants to get to Ford Hall
+from Montag. Informational screens display some relevant information, but the guest is required
+to ask around and/or resort to online research to obtain the necessary information. <br>
+<h3>Scenario B</h3>
+New student has a class in Smullin, but doesn’t know where the classroom is. Since there is no
+available resource to consult, the student resorts to passing by each room until they find the one
+they are looking for. This takes considerably longer and results in the student being late to their
+first class. <br>
+<h3>Scenario C</h3>
+A visiting student from Japan who has limited understanding of campus signage is trying to find
+Goudy Commons from Kaneko, but has no directory and can’t ask other students. Left without
+an accessible map, they end up wandering campus until they find the cafeteria. <br>
+<h2>Problem</h2>
+Basic, unenhanced digital signage systems offer limited value to users walking past. If a digital
+sign is by coincidence showing information relevant to a user’s interests, then the sign’s content
+may be of use to them. Otherwise, the sign provides no value to the user. There’s no feedback
+loop, no way to remove luck from the process of matching content to users. The interaction
+problem in this case is simply that there is no real interaction. <br>
+<h2>Proposed Solution</h2>
+The addition of touch-based interactive features, such as wayfinding, building directories, and
+event calendars, would grant users the ability to view information or content specific to their
+needs of the moment. Whether users are visitors who need directions, long-term students
+looking for more information about upcoming events, or faculty in an unfamiliar building, an
+interactive information system would be of greater value than a repeating cycle of pre-scheduled
+informational images. <br>
+Rather than develop an entirely new interactive digital signage solution, we propose to render
+the touch-based interface signage content, and interactive features as a web page. That way it
+can be shown via any digital signage hardware that can display a web page, and could be made
+available to other touch-capable devices, including phones and tablets.
+To inform users that interactive features are available, a proximity sensor would be used to
+trigger an animated overlay. The standard digital signage content would continue to be
+displayed, but icons representing wayfinding and other informational tools would be displayed
+when a nearby user was detected, along with animated pointers illustrating that one can touch
+the icons to interact with them. These controls would also be displayed on page load to support
+use on mobile devices or other systems designed for an individual user. <br>
+<h2>Personas</h2>
+There are two identifiable personas who would use/require wayfinding technologies: <br>
+<h3>The Visitor</h3>
+This is the persona of a parent or relative to a student, or perhaps a prospective student who is
+visiting the school on a tour. This persona is at a severe disadvantage due to their limited
+knowledge of the school and campus, and would see the benefits of on-demand directions and
+information immediately. <br>
+<h3>The Student</h3>
+This is the persona of a student who needs information about the building they are currently in.
+This may be a new student who needs directions to a classroom, or a legacy student who is in
+an unfamiliar building and needs to know where the department hearth is located. This could
+also include exchange/visiting students from TIU, who are in a foreign setting and are
+unaccustomed to English directories. <br>
+<h2>Use Case Scenario</h2>
+With our project the student above would be easily able to find the classroom they are looking
+for. In a specific case, the student would be able to access an informative webpage or
+application that gives directions via either instructions or a map. Additional features could
+include alternative routes, classroom/office locations, etc. A fully refined version might even
+have a variety of language options. <br>
+<h2>Related Products</h2>
+Our proposed solutions mixes elements of two existing categories of products, wayfinding apps
+and interactive digital signage systems that include wayfinding features.
+<h3>22miles</h3>
+<h4><a href="https://www.22miles.com/digital-signage-applications-2/mobile-web-wayfinder/">https://www.22miles.com/digital-signage-applications-2/mobile-web-wayfinder/</a></h4>
+22miles is a wayfinding app. It provides powerful interactive map features, but it’s limited to
+mobile devices only and users must download and install it from the relevant appstore before
+they can use it. <br>
+<h3>Elo</h3>
+<h4><a href="https://www.elotouch.com/touchscreen-signage">https://www.elotouch.com/touchscreen-signage</a></h4>
+Elo is a manufacturer of interactive digital signage devices. They bill their products as
+“touchscreen signage”. Their solutions are tied to proprietary devices, and are sold for uses
+such as room scheduling devices and restaurant ordering kiosks, as well as more traditional
+digital signage. Developing wayfinding features and building information content for their
+product would require essentially the same development process as building a standalone
+web-page solution. <br>
+<h3>Brightsign</h3>
+<h4><a href="https://www.brightsign.biz/">https://www.brightsign.biz/</a></h4>
+Brightsign is a major vendor in the digital signage market, selling content management software
+and media player devices. They do offer some interactive signage solutions, but those are not
+their primary product. Their offerings provide interactive experiences by displaying a web page.
+Therefore, a companion product along the lines of our proposed solution is required to truly
+implement interactive features. <br>
+<h3>Concerto</h3>
+<h4><a href="https://www.concerto-signage.org/">https://www.concerto-signage.org/</a></h4>
+Concerto is Willamette’s current digital signage solution. It’s an open source project maintained
+by a consortium of higher-ed institutions. Concerto is a web application that manages graphical
+content and produces collections of that content as discrete web pages. Concerto content can
+be displayed by any device that can run a web browser. As with the other digital signage
+solutions listed above, Concerto can display a web page as well as still images, and doing so is
+the only way to include interactive features. However, rotation of content can not be disabled in
+Concerto, which would cause interruptions of interactive user sessions. <br>
+<h2>Comparing Products</h2>
+Our proposed solution would fully combine wayfinding, content display, and an interactive
+interface, which none of the related products above achieve. Either they only address one part
+of the equation (22miles, Concerto), or they leave the wayfinding element to be handled or
+developed separately (Elo, Brightsign). Our approach is to center the system around
+interactivity and wayfinding while retaining content display functionality as the
+background/default element.
+<h2>Hi-Level Architecture of Proposed System</h2>
+<img src="/framePages/diagram.png" style="width:100%;">
+<h2>Feasibility</h2>
+The majority of the work in support of this solution will be the development of a web application.
+We already have the necessary hardware on hand, with the exception of the proximity/approach
+sensor. On the web application development side, we’ll have the following major tasks:<br>
+<h3>Database Design and Implementation</h3>
+Our web application will need a database to store location, event, and building information. This
+should not require a complex schema, so this task should only require a few hours.
+<h3>Web Server and Application Framework Implementation</h3>
+We’ll use standard open-source “off-the-shelf” solutions for the web server and application
+framework, so this task should also require only a few hours.
+<h3>Graphic Design, Icons, and Animations</h3>
+Only one of our team members has strengths in this area, but it will be one of their focuses. We
+estimate this part of the project will require ten hours. It could be done more quickly if necessary,
+but the approachability and usefulness of our solution rely on the graphic elements connecting
+with the users.
+<h3>Core Application Development</h3>
+The majority of our efforts will be in this area. We believe development of a rudimentary
+working version of our application will take roughly 60 person-hours. Of our team members, one
+has web design experience, another has previously developed web applications, and our third
+has programming experience and will act as a generalist.
+<h3>Proximity Sensor Integration</h3>
+We believe this will be our biggest challenge, as it’s outside of the experience and comfort areas
+of any of our team members. All team members will work to research, identify, and implement a
+solution. We hope that process will not require more than 10 combined hours.
