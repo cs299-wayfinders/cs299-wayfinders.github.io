@@ -1,0 +1,49 @@
+
+body{   
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:black;
+}
+.container{
+    width:90vw;
+    margin:auto;
+    height:90vh;
+    border-color:greenyellow;
+    border-style: dashed;
+    display:flex;
+    flex-direction:column;
+}
+.header{
+background-color:maroon;
+width:100%;
+margin:auto;
+}
+.header .title{
+text-align:center;
+padding:15px;
+color:moccasin;
+}
+.majority{
+    width:100%;
+    background-color:blueviolet;
+    height:100%;
+    display:flex;
+}
+.nav {
+    background-color:pink;
+    width:25%;
+    height:100%;
+}
+.button{
+    background-color:coral;
+    text-align:center;
+    padding:5px;
+}
+.button:hover{
+    background-color:palegreen;
+}
+.iframe {
+    background-color:aqua;
+    border-style:none;
+    width:100%;
+    height:100%;
+}
