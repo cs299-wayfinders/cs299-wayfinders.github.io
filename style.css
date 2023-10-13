@@ -1,40 +1,43 @@
 
 body{   
     font-family:Arial, Helvetica, sans-serif;
-    background-color:black;
+    background-color:rgb(92, 92, 112);
 }
 .container{
     width:90vw;
     margin:auto;
     height:90vh;
-    border-color:greenyellow;
-    border-style: dashed;
     display:flex;
     flex-direction:column;
 }
+a{
+    font-style:none;
+    text-decoration: none;
+    color:rgb(61, 61, 75);
+}
 .header{
-background-color:maroon;
+background-color:rgb(61, 61, 75);
 width:100%;
 margin:auto;
 }
 .header .title{
 text-align:center;
 padding:15px;
-color:moccasin;
+color:white;
 }
 .majority{
     width:100%;
-    background-color:blueviolet;
+    background-color:rgb(92, 92, 112);
     height:100%;
     display:flex;
 }
 .nav {
-    background-color:pink;
+    background-color:rgb(61, 61, 75);
     width:25%;
     height:100%;
 }
 .button{
-    background-color:coral;
+    background-color:rgb(142, 142, 174);
     text-align:center;
     padding:5px;
 }
@@ -42,14 +45,15 @@ color:moccasin;
     background-color:palegreen;
 }
 .disabled{
-    background-color:grey;
+    background-color:rgb(74, 74, 91);
     cursor:not-allowed;
+    color:rgb(142, 142, 174);
 }
 .disabled:hover{
-    background-color:grey;
+    background-color:rgb(74, 74, 91);
 }
 .iframe {
-    background-color:aqua;
+    background-color:white;
     border-style:none;
     width:100%;
     height:100%;
